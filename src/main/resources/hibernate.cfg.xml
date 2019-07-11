@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Wskazujemy klasę sterownika JDBC -->
+        <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+        <!-- Connection URL połączenia -->
+        <property name="hibernate.connection.url">jdbc:sqlserver://localhost\MSSQLSERVER;databaseName=Task
+        </property>
+        <!-- Nazwa użytkownika łączącego się z bazą -->
+        <property name="hibernate.connection.username">user1</property>
+        <!-- Hasło tego użytkownika -->
+        <property name="hibernate.connection.password">admin</property>
+        <!-- Dialekt SQL, którego hibernate będzie używał (różne serwery mogą się ciut różnić w przypadku zapytań SQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+        <!-- Będziemy w konsoli pokazywali wykonywane zapytania -->
+        <property name="hibernate.show_sql">true</property>
+        <!-- Dodatkowo będzie to ładnie sformatowane (wcięcia, podział na wiersze) -->
+        <property name="hibernate.format_sql">true</property>
+        <!-- Jak potraktować strukturę bazy na starcie:
+        create - tworzy strukturę bazy na starcie zgodnie z opisem encji (usuniemy dane)
+        update - zaktualizuje strukturę, jeśli będzie taka potrzeba
+        create-drop tworzy strukturę bazy na starcie i usuwa ją na koniec pracy
+        validate - sprawdzi, czy struktura zgodna jest z opisem encji -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+        <!-- Wypisanie typów encji-->
+        <mapping class="Task"/>
+
+
+
+
+    </session-factory>
+</hibernate-configuration>
