@@ -9,7 +9,7 @@
         body {
             font-family: 'Russo One', sans-serif;
             text-align: center;
-            background-color: aliceblue;
+            background-image: url("pattern.png");
         }
 
         #my-button {
@@ -17,7 +17,7 @@
             background-color: white;
             color: black;
             border: 3px solid green;
-            font-size: 18px;
+            font-size: 14px;
             margin-top: 15px;
             font-family: 'Russo One', sans-serif;
             cursor: pointer;
@@ -25,6 +25,17 @@
 
         #my-button:hover {
             background-color: coral;
+        }
+        #footer{
+            margin-top: 400px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #href{
+            font-size: larger;
+            margin-top: 20px;
         }
     </style>
 
@@ -36,6 +47,7 @@
         <button id="my-button"><a href="/delete?id=${element.id}">x</a></button>
     </div>
 </c:forEach>
-<a href="edit-task">Edit</a>
+<a href="edit-task" id="href">Edit</a>
+<div id="footer">Created By Michał Pankiewicz</div>
 </body>
 </html>
