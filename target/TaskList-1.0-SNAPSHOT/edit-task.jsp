@@ -13,7 +13,7 @@
     body {
         font-family: 'Russo One', sans-serif;
         text-align: center;
-        background-color: aliceblue;
+        background-image: url("pattern.png");
     }
 
     #my-button {
@@ -36,7 +36,7 @@
 
 </form>
 
-<div id="footer">Created By Michał Pankiewicz</div>
+<div id="footer">Created By Michał Pankiewicz 2k19</div>
 
 </body>
 </html>
